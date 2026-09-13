@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BRCM College | Virtual Assistant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f8ff;
+            color: #172033;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* COMMON */
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: #172554;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+            padding: 70px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            color: #172554;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 21px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            line-height: 1.7;
+            color: #4b5563;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            margin: 5px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .info-card h3 {
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        /* COURSES */
+        .courses {
+            background: #f5f8ff;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #6b7280;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        /* STATS */
+        .stats {
+            background: #172554;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .stat-text {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        /* FACILITIES */
+        .facilities {
+            background: white;
+        }
+
+        /* ASSISTANT */
+        .assistant-section {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+        }
+
+        .chat-container {
+            max-width: 850px;
+            height: 650px;
+            margin: auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .chat-header h2 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .online {
+            font-size: 12px;
+        }
+
+        .chat-area {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8fafc;
+        }
+
+        .message {
+            max-width: 78%;
+            padding: 13px 16px;
+            margin-bottom: 14px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.55;
+            word-wrap: break-word;
+            white-space: pre-line;
+        }
+
+        .bot {
+            background: white;
+            color: #1f2937;
+            border: 1px solid #e5e7eb;
+            border-bottom-left-radius: 5px;
+        }
+
+        .user {
+            background: #2563eb;
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* QUICK QUESTIONS */
+        .quick-area {
+            padding: 12px 15px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        .quick-title {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 7px;
+        }
+
+        .quick-btn {
+            border: none;
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 9px 13px;
+            margin: 4px 2px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .quick-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* INPUT */
+        .input-area {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid #e5e7eb;
+            border-radius: 28px;
+            outline: none;
+            font-size: 14px;
+            background: #f9fafb;
+        }
+
+        .input-area input:focus {
+            border-color: #2563eb;
+            background: white;
+        }
+
+        .send-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .send-btn:hover {
+            background: #1d4ed8;
+        }
+        /* CONTACT */
+        .contact {
+            background: #172554;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-subtitle {
+            color: #cbd5e1;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .contact-icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .about-grid,
+            .cards,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chat-container {
+                height: 620px;
+                border-radius: 16px;
+            }
+
+            .message {
+                max-width: 88%;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .container {
+                padding: 50px 16px;
+            }
+
+            .hero {
+                min-height: 560px;
+                padding: 50px 16px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .nav-logo {
+                font-size: 18px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .input-area {
+                padding: 10px;
+            }
+
+            .quick-btn {
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                BRCM College
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#assistant">AI Assistant</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🤖 BRCM Virtual Assistant
+            </div>
+
+            <h1>
+                BRCM College of Engineering & Technology
+            </h1>
+
+            <h2>
+                Your Smart College Information Assistant
+            </h2>
+
+            <p>
+                Welcome to the BRCM Virtual Assistant. Get quick information
+                about courses, admission, fees, hostel, placement, facilities
+                and other college-related queries.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#assistant" class="btn btn-primary">
+                    💬 Ask AI Assistant
+                </a>
+
+                <a href="#courses" class="btn btn-secondary">
+                    🎓 Explore Courses
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About BRCM
+            </h2>
+
+            <p class="section-subtitle">
+                BRCM College of Engineering & Technology
+            </p>
+
+            <div class="about-grid">
+
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>
+                        Vidyagram, VPO-Bahal, District Bhiwani,
+                        Haryana - 127028.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🏫 Established</h3>
+                    <p>
+                        BRCM College of Engineering & Technology
+                        started its journey in August 1999.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🎓 University</h3>
+                    <p>
+                        The college is affiliated with
+                        Maharshi Dayanand University (MDU), Rohtak.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>✅ Approval</h3>
+                    <p>
+                        The college is approved by AICTE and
+                        recognized by the Government of Haryana.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COURSES -->
+    <section class="courses" id="courses">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Courses & Programs
+            </h2>
+
+            <p class="section-subtitle">
+                Explore major programs available at BRCM
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">💻</div>
+
+                    <h3>
+                        B.Tech CSE
+                    </h3>
+
+                    <p>
+                        4-year Bachelor of Technology programme
+                        in Computer Science & Engineering.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+
+                    <h3>
+                        B.Tech CSE (AI & ML)
+                    </h3>
+
+                    <p>
+                        Computer Science Engineering with
+                        Artificial Intelligence & Machine Learning.
+                        Available from 2026-27 with 60 seats.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+
+                    <h3>
+                        Mechanical Engineering
+                    </h3>
+
+                    <p>
+                        B.Tech programme in Mechanical Engineering
+                        focused on engineering and manufacturing.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon">🏗️</div>
+
+                    <h3>
+                        Civil Engineering
+                    </h3>
+
+                    <p>
+                        B.Tech programme covering construction,
+                        infrastructure and civil engineering.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+
+                    <h3>
+                        Electrical Engineering
+                    </h3>
+
+                    <p>
+                        B.Tech programme in Electrical Engineering
+                        and related technologies.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+
+                    <h3>
+                        M.Tech CSE
+                    </h3>
+
+                    <p>
+                        2-year M.Tech Computer Science & Engineering
+                        programme with an intake of 12 students.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat">
+                    <div class="stat-number">1999</div>
+                    <div class="stat-text">Established</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">60</div>
+                    <div class="stat-text">CSE AI & ML Seats</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-text">Engineering Programs</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">24×7</div>
+                    <div class="stat-text">Virtual Assistant</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FACILITIES -->
+    <section class="facilities" id="facilities">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                College Facilities
+            </h2>
+
+            <p class="section-subtitle">
+                Facilities available for students at BRCM
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Hostel & Mess</h3>
+                    <p>
+                        Hostel facilities are available for students.
+                        Hostel and mess charges are listed in the
+                        official fee structure.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Library</h3>
+                    <p>
+                        Students have access to library resources,
+                        periodicals, journals and technical manuals.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3>Training & Placement</h3>
+                    <p>
+                        BRCM provides Training & Placement facilities
+                        and campus placement opportunities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎖️</div>
+                    <h3>NCC</h3>
+                    <p>
+                        NCC facility is available for students
+                        interested in discipline and leadership activities.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Student Societies</h3>
+                    <p>
+                        Students can participate in different societies
+                        and committees, including CSES.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>Virtual Assistant</h3>
+                    <p>
+                        Ask questions about BRCM courses, admission,
+                        fees, hostel, placement and more.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI ASSISTANT -->
+    <section class="assistant-section" id="assistant">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                BRCM AI Virtual Assistant
+            </h2>
+
+            <p class="section-subtitle">
+                Ask your college-related questions
+            </p>
+
+            <div class="chat-container">
+
+                <div class="chat-header">
+
+                    <h2>🤖 BRCM Assistant</h2>
+
+                    <div class="online">
+                        ● Online • Ready to help
+                    </div>
+
+                </div>
+
+
+                <div class="chat-area" id="chatArea">
+
+                    <div class="message bot">
+                        👋 Hello! Welcome to BRCM Virtual Assistant.
+
+                        You can ask me about courses, admission,
+                        fees, hostel, placement, library,
+                        contact details and more.
+                    </div>
+
+                </div>
+
+
+                <div class="quick-area">
+
+                    <div class="quick-title">
+                        Quick Questions
+                    </div>
+
+                    <button class="quick-btn"
+                        onclick="askQuick('BRCM College kaha hai')">
+                        📍 Location
+                    </button>
+
+                    <button class="quick-btn"
+                        onclick="askQuick('BRCM me kaun kaun se courses hain')">
+                        🎓 Courses
+                    </button>
+
+                    <button class="quick-btn"
+                        onclick="askQuick('CSE me admission kaise hota hai')">
+                        📝 Admission
+                    </button>
+
+                    <button class="quick-btn"
+                        onclick="askQuick('BRCM ki fees kitni hai')">
+                        💰 Fees
+                    </button>
+
+                    <button class="quick-btn"
+                        onclick="askQuick('BRCM me hostel hai kya')">
+                        🏠 Hostel
+                    </button>
+
+                    <button class="quick-btn"
+                        onclick="askQuick('BRCM ka contact number kya hai')">
+                        📞 Contact
+                    </button>
+
+                </div>
+
+
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="Type your question..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        class="send-btn"
+                        onclick="sendQuestion()">
+                        ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact BRCM
+            </h2>
+
+            <p class="section-subtitle">
+                Need more information? Contact the college.
+            </p>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">📍</div>
+
+                    <h3>Address</h3>
+
+                    <p>
+                        BRCM College of Engineering & Technology,
+                        Bahal-127028, District Bhiwani,
+                        Haryana, India.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">📞</div>
+
+                    <h3>Admission Helpline</h3>
+
+                    <p>
+                        +91-80599-00247
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">☎️</div>
+
+                    <h3>General Contact</h3>
+
+                    <p>
+                        +91-80599-00243
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">✉️</div>
+
+                    <h3>Email</h3>
+
+                    <p>
+                        infocollege@brcm.edu.in
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+                    <div class="contact-icon">🕘</div>
+
+<h3>Working Hours</h3>
+
+<p>
+    Monday – Saturday<br>
+    9:00 AM – 5:00 PM
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+    <div class="contact-icon">🌐</div>
+
+    <h3>Official Website</h3>
+
+    <p>
+        www.brcmcet.edu.in
+    </p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 BRCM College of Engineering & Technology
+    </p>
+
+    <p style="margin-top: 6px;">
+        BRCM Virtual Assistant • Hackathon Project
+    </p>
+
+</footer>
+
+
+<script>
+
+const input = document.getElementById("questionInput");
+const chatArea = document.getElementById("chatArea");
+
+function addMessage(text, type) {
+
+    const message = document.createElement("div");
+
+    message.className = "message " + type;
+
+    message.textContent = text;
+
+    chatArea.appendChild(message);
+
+    chatArea.scrollTop = chatArea.scrollHeight;
+}
+
+
+async function sendQuestion() {
+
+    const question = input.value.trim();
+
+    if (!question) {
+        return;
+    }
+
+    addMessage(question, "user");
+
+    input.value = "";
+
+    try {
+
+        const response = await fetch("/ask", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                question: question
+            })
+
+        });
+
+        const data = await response.json();
+
+        addMessage(data.answer, "bot");
+
+    } catch (error) {
+
+        addMessage(
+            "Sorry, server se connection nahi ho pa raha. Please try again.",
+            "bot"
+        );
+
+        console.error(error);
+    }
+}
+
+
+function askQuick(question) {
+
+    input.value = question;
+
+    sendQuestion();
+
+}
+
+
+input.addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+
+        sendQuestion();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
