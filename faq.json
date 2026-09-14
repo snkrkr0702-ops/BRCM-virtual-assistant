@@ -25,7 +25,7 @@
     },
     {
         "question": "B.Tech CSE AI ML available hai kya",
-        "answer": "Haan. CSE department ke according B.Tech CSE (Artificial Intelligence & Machine Learning) programme 2026-27 se available hai, with an intake of 60 students."
+        "answer": "Haan. BRCM me B.Tech CSE (Artificial Intelligence & Machine Learning) programme 2026-27 se available hai."
     },
     {
         "question": "B.Tech CSE me kitni seats hain",
@@ -41,15 +41,15 @@
     },
     {
         "question": "CSE me admission kaise hota hai",
-        "answer": "B.Tech CSE aur B.Tech CSE (AI & ML) ke liye official CSE department information ke according students JEE ke through admit hote hain. Diploma holders 2nd year me LEET ke through admission le sakte hain."
+        "answer": "B.Tech CSE aur B.Tech CSE (AI & ML) ke liye official CSE department information ke according students JEE ke through admit hote hain."
     },
     {
         "question": "Diploma ke baad B.Tech me admission kaise le",
-        "answer": "Official CSE department information ke according diploma holders 2nd year me lateral entry ke through admission le sakte hain. Admission LEET, Haryana state counselling process ke through hota hai."
+        "answer": "Diploma holders 2nd year me lateral entry ke through B.Tech me admission le sakte hain. Admission LEET aur Haryana state counselling process ke through hota hai."
     },
     {
         "question": "M.Tech CSE admission kaise hota hai",
-        "answer": "Official CSE department information ke according M.Tech CSE admissions GATE score/qualifying examination ki merit ke basis par decide hote hain."
+        "answer": "Official CSE department information ke according M.Tech CSE admissions GATE score ya qualifying examination ki merit ke basis par decide hote hain."
     },
     {
         "question": "BRCM ka admission helpline number kya hai",
@@ -93,15 +93,15 @@
     },
     {
         "question": "BRCM me hostel hai kya",
-        "answer": "BRCM ke official fee document me hostellers ke liye Hostel & Mess Charges aur Hostel & Mess Security listed hain. Current hostel availability aur charges admission office se confirm karein."
+        "answer": "Haan. BRCM ke official fee document me hostellers ke liye Hostel & Mess Charges aur Hostel & Mess Security listed hain. Current hostel availability aur charges admission office se confirm karein."
     },
     {
         "question": "BRCM ki fees kitni hai",
-        "answer": "BRCM ke official fee document me ek fee structure me annual tuition fee ₹64,000 aur development fee ₹16,000 listed hai. Total fee course/session/category ke according change ho sakti hai, isliye current fee admission office se confirm karein."
+        "answer": "BRCM ke official fee document me ek fee structure me annual tuition fee ₹64,000 aur development fee ₹16,000 listed hai. Total fee course, session aur category ke according change ho sakti hai."
     },
     {
         "question": "BRCM me placement hai kya",
-        "answer": "Haan. College ke official documents me Training & Placement facilities aur campus placement data listed hai. Current placement details ke liye college ke latest placement information ko check karna best rahega."
+        "answer": "Haan. College ke official documents me Training & Placement facilities aur campus placement data listed hai. Current placement details college ke latest placement information se confirm karna best rahega."
     },
     {
         "question": "BRCM me library hai kya",
@@ -117,6 +117,86 @@
     },
     {
         "question": "BRCM college ke principal kaun hain",
-        "answer": "BRCM ki official website par Dr. Anuj Kumar Sharma ko Principal listed kiya gaya hai."
+        "answer": "BRCM ki official website par Prof. Anuj Kumar Sharma ko Principal listed kiya gaya hai."
+    },
+    {
+        "question": "BRCM college ke director kaun hain",
+        "answer": "BRCM Education Society ke Director Dr. S.K. Sinha hain."
+    },
+    {
+        "question": "BRCM me M.Tech ke kaun kaun se courses hain",
+        "answer": "Official documents ke according M.Tech programmes me Computer Science & Engineering, Electronics & Communication Engineering, Electrical & Electronics Engineering, Manufacturing & Automation aur Structural Engineering listed hain."
+    },
+    {
+        "question": "BRCM me B.Tech ke kaun kaun se courses hain",
+        "answer": "BRCM ke official documents me B.Tech Computer Science & Engineering, Mechanical Engineering, Civil Engineering aur Electrical Engineering listed hain."
+    },
+    {
+        "question": "BRCM me AI ML course hai kya",
+        "answer": "Haan. B.Tech Computer Science & Engineering with Artificial Intelligence & Machine Learning programme 2026-27 se available hai."
+    },
+    {
+        "question": "BRCM me computer science engineering hai kya",
+        "answer": "Haan. BRCM me Computer Science & Engineering department hai aur B.Tech CSE programme available hai."
+    },
+    {
+        "question": "BRCM CSE kitne saal ka hai",
+        "answer": "B.Tech Computer Science & Engineering programme 4 years ka hai."
+    },
+    {
+        "question": "BRCM M.Tech CSE kitne saal ka hai",
+        "answer": "M.Tech Computer Science & Engineering programme 2 years ka hai."
+    },
+    {
+        "question": "BRCM me lateral entry hai kya",
+        "answer": "Haan. Diploma holders B.Tech ke 2nd year me lateral entry ke through admission le sakte hain."
+    },
+    {
+        "question": "BRCM me LEET se admission hota hai kya",
+        "answer": "Haan. Diploma holders ke liye B.Tech 2nd year lateral entry admission LEET aur Haryana state counselling process ke through hota hai."
+    },
+    {
+        "question": "BRCM me GATE se M.Tech admission hota hai kya",
+        "answer": "M.Tech CSE admission me GATE score ya qualifying examination ki merit ko consider kiya jata hai."
+    },
+    {
+        "question": "BRCM ka official website kya hai",
+        "answer": "BRCM College of Engineering & Technology ki official website brcmcet.edu.in hai."
+    },
+    {
+        "question": "BRCM ka ERP kya hai",
+        "answer": "BRCM ki official website par ERP aur online services ke links available hain, jinke through students aur users related online services access kar sakte hain."
+    },
+    {
+        "question": "BRCM me online services hain kya",
+        "answer": "Haan. BRCM ki official website par ERP aur various online service links available hain."
+    },
+    {
+        "question": "BRCM CSES kya hai",
+        "answer": "CSES ka full form Computer Science Engineering Society hai. Ye CSE department ki student society hai."
+    },
+    {
+        "question": "BRCM me academic information kaha milegi",
+        "answer": "BRCM ki official website ke Syllabus & Academics section me syllabus aur academic documents available hain."
+    },
+    {
+        "question": "BRCM me syllabus available hai kya",
+        "answer": "Haan. BRCM ki official website ke Syllabus & Academics section me different programmes ke syllabus aur academic documents listed hain."
+    },
+    {
+        "question": "BRCM me anti ragging facility hai kya",
+        "answer": "Haan. BRCM ki official website par Anti-Ragging related information aur resources listed hain."
+    },
+    {
+        "question": "BRCM me student complaints ke liye facility hai kya",
+        "answer": "Haan. BRCM ki official website par SC/ST/OBC complaints aur other grievance-related resources ke links available hain."
+    },
+    {
+        "question": "BRCM ka admission contact kya hai",
+        "answer": "Admission ke liye official Admission Helpline Number +91-80599-00247 hai."
+    },
+    {
+        "question": "BRCM ka general contact kya hai",
+        "answer": "BRCM ka general contact number +91-80599-00243 aur email infocollege@brcm.edu.in hai."
     }
 ]
